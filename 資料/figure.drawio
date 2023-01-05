@@ -1,0 +1,74 @@
+<mxfile host="65bd71144e">
+    <diagram id="I6dDUYCdpvbhmLWfBE2D" name="ページ1">
+        <mxGraphModel dx="979" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="583" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8" value="NO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="110" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="設定保存先のアプリが作成されている" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="40" width="400" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="9">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="470" y="340" as="sourcePoint"/>
+                        <mxPoint x="240" y="150" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="280" y="80"/>
+                            <mxPoint x="240" y="80"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="680" y="80" as="sourcePoint"/>
+                        <mxPoint x="720" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="720" y="80"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="YES" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="110" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="スペースを利用している" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="160" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="120" y="200" as="sourcePoint"/>
+                        <mxPoint x="80" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="80" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="360" y="200" as="sourcePoint"/>
+                        <mxPoint x="400" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="400" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="YES" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="230" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="NO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="230" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="スペース指定" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="アプリ指定" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="新規設定" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

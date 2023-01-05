@@ -1,0 +1,89 @@
+/* 全体 */
+
+#setting {
+    font-size: 20px;
+    font-family: BIZ UDPゴシック, BIZ UDPGothic;
+    margin: 2%;
+}
+
+/* 非表示領域 */
+
+.hide {
+    display: none;
+}
+
+/* タブ項目 */
+
+.tab {
+    background-color: #b0c1f6;
+    width: fit-content;
+    display: flex;
+    font-weight: bold;
+}
+
+.tab-item {
+    padding: 0.7em;
+    border: 1px solid #068189;
+}
+
+.tab-label:hover {
+    background-color: rgb(116, 160, 255);
+    color: #fff;
+    font-weight: bold;
+}
+
+.tab-label {
+    cursor: pointer;
+}
+
+.tab-label:focus {
+    background-color: rgb(116, 160, 255);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* タブ内設定エリア */
+
+.configArea {
+    width: fit-content;
+    margin-top: -0.04em;
+    padding: 0.5em 1em 1.5em 1em;
+    background-color: #ececec;
+    border: 1px solid #068189;
+}
+
+/* 選択中のタブ */
+
+.selectTab {
+    background-color: rgb(76, 122, 223);
+    color: #fff;
+    font-weight: bold;
+}
+
+.tab-label.selectTab:hover {
+    background-color: rgb(76, 122, 223);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ボタン */
+.setting-button {
+    color: #fff;
+    background-color: #5a3ce4;
+    border-bottom: 5px solid #202d6d;
+    border-radius: 5px;
+    width: 20%;
+    height: 3em;
+}
+
+.setting-button:hover {
+    margin-top: 3px;
+    color: #ffffff;
+    background: #2f14a8;
+    border-bottom: 2px solid #202d6d;
+}
+
+.setting-button--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
