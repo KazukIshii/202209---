@@ -48,7 +48,7 @@ async function appAccessPermissionConfigOutput(targetAppId, targetAppName, confi
         //アクセス権対象タイプ
         postInfo["アクセス権対象タイプ"] = { value: config.entity.type };
         //アクセス権対象コード
-        postInfo["アクセス権対象コード"] = { value: config.entity.code };
+        postInfo["アクセス権対象コード"] = { value: !config.entity.code ? "" : config.entity.code };
         //下位組織への継承
         postInfo["下位組織への継承"] = { value: `${config.includeSubs}` };
         //アプリ管理
@@ -66,7 +66,7 @@ async function appAccessPermissionConfigOutput(targetAppId, targetAppName, confi
         //ファイル書き出し
         postInfo["ファイル書き出し"] = { value: `${config.recordExportable}` };
 
-        //アクション単位での情報をbodyに追加
+        //アクセス権単位での情報をbodyに追加
         postBody.records.push(postInfo);
     });
 
