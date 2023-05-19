@@ -5,13 +5,13 @@
  * @param {number | string} configAppId 書き出し先のアプリID
  * @returns リクエスト用のプロミスオブジェクト
  */
-async function designInfoOutput(targetAppId, targetAppName, configAppId) {
+async function actionConfigOutput(targetAppId, targetAppName, configAppId) {
     /*=== アクション設定の取得 ===*/
     //アクション設定の取得
     const getBody = {
         app: targetAppId,
     };
-    const resp = kintone.api(kintone.api.url("/k/v1/app/actions.json", true), "GET", getBody);
+    const actionResp = await kintone.api(kintone.api.url("/k/v1/app/actions.json", true), "GET", getBody);
 
     /*=== 書き出し用bodyの生成 ===*/
     //書き出し用のbody
@@ -33,7 +33,7 @@ async function designInfoOutput(targetAppId, targetAppName, configAppId) {
     }
 
     //全アクションの設定取得
-    for (const config of Object.values(resp.actions)) {
+    for (const config of Object.values(actionResp.actions)) {
         //1アクション単位の書き出し情報オブジェクト
         const postInfo = {};
 
@@ -60,7 +60,7 @@ async function designInfoOutput(targetAppId, targetAppName, configAppId) {
         //連携項目情報
         postInfo["連携項目情報"] = { value: [] };
 
-        for (const mapping of config.destApp.mappings) {
+        for (const mapping of config.mappings) {
             //1行単位の書き出し情報オブジェクト
             const rowInfo = { value: {} };
 
@@ -80,7 +80,7 @@ async function designInfoOutput(targetAppId, targetAppName, configAppId) {
         //アクションの利用者情報
         postInfo["アクションの利用者情報"] = { value: [] };
 
-        for (const entitie of config.destApp.entities) {
+        for (const entitie of config.entities) {
             //1行単位の書き出し情報オブジェクト
             const rowInfo = { value: {} };
 
@@ -92,15 +92,19 @@ async function designInfoOutput(targetAppId, targetAppName, configAppId) {
             switch (entitie.type) {
                 case "USER":
                     rowInfo.value["ユーザー"] = { value: [{ code: entitie.code }] };
+                    break;
                 case "GROUP":
                     rowInfo.value["グループ"] = { value: [{ code: entitie.code }] };
+                    break;
                 case "ORGANIZATION":
                     rowInfo.value["組織"] = { value: [{ code: entitie.code }] };
+                    break;
                 default:
+                    break;
             }
 
-            //1行単位（1連携項目単位）での情報を連携項目情報に追加
-            postInfo.連携項目情報.value.push(rowInfo);
+            //1行単位（1連携項目単位）での情報をアクションの利用者情報に追加
+            postInfo.アクションの利用者情報.value.push(rowInfo);
         }
 
         //アクション単位での情報をbodyに追加
@@ -112,3 +116,5 @@ async function designInfoOutput(targetAppId, targetAppName, configAppId) {
 
     return promoiseObj;
 }
+
+export { actionConfigOutput };
