@@ -57,21 +57,21 @@ async function appAccessPermissionConfigOutput(targetAppId, targetAppName, confi
     // アクセス権対象コード
     postInfo["アクセス権対象コード"] = { value: !config.entity.code ? "" : config.entity.code };
     // 下位組織への継承
-    postInfo["下位組織への継承"] = { value: `${config.includeSubs}` };
+    postInfo["下位組織への継承"] = { value: config.includeSubs };
     // アプリ管理
-    postInfo["アプリ管理"] = { value: `${config.appEditable}` };
+    postInfo["アプリ管理"] = { value: config.appEditable };
     // レコード閲覧
-    postInfo["レコード閲覧"] = { value: `${config.recordViewable}` };
+    postInfo["レコード閲覧"] = { value: config.recordViewable };
     // レコード追加
-    postInfo["レコード追加"] = { value: `${config.recordAddable}` };
+    postInfo["レコード追加"] = { value: config.recordAddable };
     // レコード編集
-    postInfo["レコード編集"] = { value: `${config.recordEditable}` };
+    postInfo["レコード編集"] = { value: config.recordEditable };
     // レコード削除
-    postInfo["レコード削除"] = { value: `${config.recordDeletable}` };
+    postInfo["レコード削除"] = { value: config.recordDeletable };
     // ファイル読み込み
-    postInfo["ファイル読み込み"] = { value: `${config.recordImportable}` };
+    postInfo["ファイル読み込み"] = { value: config.recordImportable };
     // ファイル書き出し
-    postInfo["ファイル書き出し"] = { value: `${config.recordExportable}` };
+    postInfo["ファイル書き出し"] = { value: config.recordExportable };
 
     // アクセス権単位での情報をbodyに追加
     postBody.records.push(postInfo);
